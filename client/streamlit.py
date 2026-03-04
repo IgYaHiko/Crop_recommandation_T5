@@ -50,29 +50,42 @@ with st.form("crop_form"):
 # -------- Prediction --------
 if submitted:
     prompt = f"""
-You are an agricultural assistant.
+You are an expert agricultural advisor.
 
-Based on the soil and climate data below, recommend the single most suitable crop.
-Then briefly explain why it is suitable and mention 2 best practices.
+Your task:
+1. Identify the MOST suitable crop based on the data.
+2. Explain the reasoning in detail (at least 3 sentences).
+3. Provide 3 practical farming recommendations.
+
+IMPORTANT RULES:
+- Be specific to the given soil and climate values.
+- Do NOT answer in one line.
+- Use simple, farmer-friendly language.
 
 Soil and climate data:
-- Nitrogen: {nitrogen} ppm
-- Phosphorus: {phosphorus} ppm
-- Potassium: {potassium} ppm
-- Temperature: {temperature}°C
-- Humidity: {humidity}%
-- Rainfall: {rainfall} mm
-- Soil pH: {ph}
+Nitrogen: {nitrogen} ppm
+Phosphorus: {phosphorus} ppm
+Potassium: {potassium} ppm
+Temperature: {temperature}°C
+Humidity: {humidity}%
+Rainfall: {rainfall} mm
+Soil pH: {ph}
 
-Additional farmer notes:
-{extra_notes if extra_notes.strip() else "None"}
+Farmer context:
+{extra_notes if extra_notes.strip() else "No additional context provided."}
 
-Output format:
-Crop: <crop_name>
-Reason: <short explanation>
-Best practices:
-- ...
-- ...
+Respond strictly in this format:
+
+Crop:
+<crop name>
+
+Why this crop is suitable:
+<detailed explanation, minimum 3 sentences>
+
+Farming tips:
+- Tip 1
+- Tip 2
+- Tip 3
 """
 
     with st.spinner("Analyzing soil and climate data..."):
