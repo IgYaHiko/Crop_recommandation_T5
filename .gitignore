@@ -1,0 +1,86 @@
+# ===============================
+# Python
+# ===============================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# ===============================
+# Virtual Environments
+# ===============================
+env/
+venv/
+.venv/
+ENV/
+.python-version
+
+# ===============================
+# Environment Variables
+# ===============================
+.env
+.env.*
+*.env
+
+# ===============================
+# Datasets & Generated Data
+# ===============================
+
+
+# ===============================
+# Model Artifacts
+# ===============================
+models/
+checkpoints/
+*.bin
+*.pt
+*.ckpt
+*.safetensors
+*.onnx
+
+# ===============================
+# Hugging Face / Transformers
+# ===============================
+.cache/
+huggingface/
+hf_cache/
+wandb/
+runs/
+
+# ===============================
+# Streamlit
+# ===============================
+.streamlit/secrets.toml
+.streamlit/config.toml
+
+# ===============================
+# Logs & Temp
+# ===============================
+logs/
+*.log
+tmp/
+temp/
+
+# ===============================
+# Jupyter / Kaggle
+# ===============================
+.ipynb_checkpoints/
+*.ipynb
+
+# ===============================
+# OS / Editor
+# ===============================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ===============================
+# Build / Distribution
+# ===============================
+dist/
+build/
